@@ -2,16 +2,16 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
 
 /*basic reset*/
-* {margin: 0; padding: 0;}
+* {
+	margin: 0; 
+	padding: 0;
+	box-sizing: border-box;
+}
+
 
 html {
 	height: 100%;
-	/*Image only BG fallback*/
-	background: url('http://thecodeplayer.com/uploads/media/gs.png');
-	/*background = gradient + image pattern combo*/
-	background: 
-		linear-gradient(rgba(196, 102, 0, 0.2), rgba(155, 89, 182, 0.2)), 
-		url('http://thecodeplayer.com/uploads/media/gs.png');
+	background: #4B99BD;
 }
 
 body {
@@ -30,8 +30,6 @@ body {
 	border-radius: 3px;
 	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
 	padding: 20px 30px;
-	
-	box-sizing: border-box;
 	width: 80%;
 	margin: 0 10%;
 	
@@ -49,7 +47,6 @@ body {
 	border-radius: 3px;
 	margin-bottom: 10px;
 	width: 100%;
-	box-sizing: border-box;
 	font-family: montserrat;
 	color: #2C3E50;
 	font-size: 13px;
@@ -57,7 +54,7 @@ body {
 /*buttons*/
 #msform .action-button {
 	width: 100px;
-	background: #27AE60;
+	background: #de5514;
 	font-weight: bold;
 	color: white;
 	border: 0 none;
@@ -67,7 +64,7 @@ body {
 	margin: 10px 5px;
 }
 #msform .action-button:hover, #msform .action-button:focus {
-	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #de5514;
 }
 /*headings*/
 .fs-title {
@@ -98,7 +95,21 @@ body {
 	float: left;
 	position: relative;
 }
+
+/*progressbar connectors*/
 #progressbar li:before {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: white;
+	position: absolute;
+	left: -50%;
+	top: 23px;
+	z-index: -1; /*put it behind the numbers*/
+}
+
+/*progressbar counters*/
+#progressbar li:after {
 	content: counter(step);
 	counter-increment: step;
 	width: 20px;
@@ -108,27 +119,17 @@ body {
 	color: #333;
 	background: white;
 	border-radius: 3px;
-	margin: 0 auto 5px auto;
+	margin: 5px auto 5px auto;
 }
-/*progressbar connectors*/
-#progressbar li:after {
-	content: '';
-	width: 100%;
-	height: 2px;
-	background: white;
-	position: absolute;
-	left: -50%;
-	top: 9px;
-	z-index: -1; /*put it behind the numbers*/
-}
-#progressbar li:first-child:after {
+
+#progressbar li:first-child:before {
 	/*connector not needed before the first step*/
 	content: none; 
 }
-/*marking active/completed steps green*/
-/*The number of the step and the connector before it = green*/
-#progressbar li.active:before,  #progressbar li.active:after{
-	background: #27AE60;
+/*marking active/completed steps orange*/
+/*The number of the step and the connector before it = orange*/
+#progressbar li.active:after,  #progressbar li.active:before{
+	background: #de5514;
 	color: white;
 }
 
