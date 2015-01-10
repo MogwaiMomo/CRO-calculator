@@ -17,13 +17,17 @@ html {
 body {
 	font-family: montserrat, arial, verdana;
 }
+
+
 /*form styles*/
+
 #msform {
-	width: 400px;
-	margin: 50px auto;
+	width: 500px;
+	margin: 150px auto;
 	text-align: center;
 	position: relative;
 }
+
 #msform fieldset {
 	background: white;
 	border: 0 none;
@@ -40,6 +44,14 @@ body {
 #msform fieldset:not(:first-of-type) {
 	display: none;
 }
+
+#msform .intro {
+	padding-top: 75px;
+	padding-bottom: 50px;
+}
+
+
+
 /*inputs*/
 #msform input, #msform textarea {
 	padding: 15px;
@@ -51,22 +63,32 @@ body {
 	color: #2C3E50;
 	font-size: 13px;
 }
+
 /*buttons*/
 #msform .action-button {
-	width: 100px;
+	width: 200px;
 	background: #de5514;
 	font-weight: bold;
 	color: white;
 	border: 0 none;
-	border-radius: 1px;
+	border-radius: 3px;
 	cursor: pointer;
-	padding: 10px 5px;
-	margin: 10px 5px;
+	padding: 20px 5px;
+	margin: 30px 5px 10px 5px;
 }
 #msform .action-button:hover, #msform .action-button:focus {
 	box-shadow: 0 0 0 2px white, 0 0 0 3px #de5514;
 }
 /*headings*/
+
+.intro-title {
+	font-size: 30px;
+	text-transform: none;
+	color: #2C3E50;
+	line-height: 1.3;
+	margin-bottom: 20px;
+}
+
 .fs-title {
 	font-size: 15px;
 	text-transform: uppercase;
@@ -85,7 +107,10 @@ body {
 	overflow: hidden;
 	/*CSS counters to number the steps*/
 	counter-reset: step;
+	visibility: hidden;
 }
+
+
 #progressbar li {
 	list-style-type: none;
 	color: white;
@@ -131,6 +156,17 @@ body {
 #progressbar li.active:after,  #progressbar li.active:before{
 	background: #de5514;
 	color: white;
+}
+
+
+.bd-txt {
+	font-size: 13px;
+	color: #555;
+	font-weight: normal;
+}
+
+.underline {
+	text-decoration: underline;
 }
 
 
