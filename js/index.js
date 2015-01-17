@@ -1,5 +1,5 @@
 /* 
-Orginal Page: http://thecodeplayer.com/walkthrough/jquery-multi-step-form-with-progress-bar 
+Original Page: http://thecodeplayer.com/walkthrough/jquery-multi-step-form-with-progress-bar 
 
 */
 //jQuery time

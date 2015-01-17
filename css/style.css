@@ -1,5 +1,5 @@
 /*custom font*/
-@import url(http://fonts.googleapis.com/css?family=Montserrat);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 /*basic reset*/
 * {
@@ -19,16 +19,19 @@ body {
 }
 
 
+
 /*form styles*/
 
 #msform {
 	width: 500px;
-	margin: 150px auto;
+	margin: 75px auto;
 	text-align: center;
 	position: relative;
 }
 
-#msform fieldset {
+
+
+div.intro {
 	background: white;
 	border: 0 none;
 	border-radius: 3px;
@@ -39,17 +42,34 @@ body {
 	
 	/*stacking fieldsets above each other*/
 	position: absolute;
+	z-index: 1000;
 }
+
+#msform fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	width: 80%;
+	margin: 0 10%;
+	opacity: 0;
+	
+	/*stacking fieldsets above each other*/
+	position: absolute;
+}
+
+
+
 /*Hide all except first fieldset*/
 #msform fieldset:not(:first-of-type) {
 	display: none;
 }
 
-#msform .intro {
+#msform div.intro {
 	padding-top: 75px;
 	padding-bottom: 50px;
 }
-
 
 
 /*inputs*/
@@ -64,9 +84,14 @@ body {
 	font-size: 13px;
 }
 
+input[placeholder] {
+	font-size: 11px;
+	text-align: center;
+}
+
 /*buttons*/
 #msform .action-button {
-	width: 200px;
+	max-width: 150px;
 	background: #de5514;
 	font-weight: bold;
 	color: white;
@@ -76,13 +101,26 @@ body {
 	padding: 20px 5px;
 	margin: 30px 5px 10px 5px;
 }
-#msform .action-button:hover, #msform .action-button:focus {
+
+#msform .action-button:hover, 
+#msform .action-button:focus {
 	box-shadow: 0 0 0 2px white, 0 0 0 3px #de5514;
 }
+
+#msform .previous.action-button {
+	background-color: #798CA5;
+}
+
+#msform .previous.action-button:hover, 
+#msform .previous.action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #798CA5;
+}
+
 /*headings*/
 
 .intro-title {
 	font-size: 30px;
+	font-weight: 700;
 	text-transform: none;
 	color: #2C3E50;
 	line-height: 1.3;
@@ -90,24 +128,72 @@ body {
 }
 
 .fs-title {
-	font-size: 15px;
+	font-size: 20px;
 	text-transform: uppercase;
 	color: #2C3E50;
+	margin-top: 10px;
 	margin-bottom: 10px;
 }
 .fs-subtitle {
 	font-weight: normal;
 	font-size: 13px;
+	line-height: 1.5;
 	color: #666;
 	margin-bottom: 20px;
 }
+
+.ip-label {
+	font-size: 15px;
+	line-height: 1.5;
+	color: #333;
+	margin-top: 7px;
+	margin-bottom: 3px;
+}
+
+.ip-help {
+	font-size: 10px;
+	line-height: 1.2;
+	color: #999;
+	margin-bottom: 3px;
+}
+
 /*progressbar*/
 #progressbar {
 	margin-bottom: 30px;
 	overflow: hidden;
 	/*CSS counters to number the steps*/
 	counter-reset: step;
-	visibility: hidden;
+	opacity: 0;
+}
+
+.appear {
+	-webkit-animation: appear 0.5s ease-in forwards;
+	animation: appear 0.5s ease-in forwards;
+}
+
+@-webkit-keyframes appear {
+	0% { opacity: 0;}
+	100% { opacity: 100;}
+}
+
+@keyframes appear {
+	0% { opacity: 0;}
+	100% { opacity: 100;}
+}
+
+.disappear {
+	-webkit-animation: disappear 0.5s ease-out forwards;
+	animation: disappear 0.5s ease-out forwards;
+}
+
+@-webkit-keyframes disappear {
+	0% { opacity: 100;}
+	100% { opacity: 0;}
+}
+
+@keyframes disappear {
+	0% { opacity: 100;}
+	100% { opacity: 0;}
 }
 
 
@@ -169,5 +255,7 @@ body {
 	text-decoration: underline;
 }
 
-
+.hide {
+	visibility:hidden;
+}
 
