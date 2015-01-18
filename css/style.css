@@ -44,6 +44,21 @@ div.intro {
 	z-index: 1000;
 }
 
+div.answers {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	width: 80%;
+	margin: 0 10%;
+	/*keep hidden until the 'calculate button' is clicked on*/
+	opacity: 0;
+	/*stacking fieldsets above each other*/
+	position: absolute;
+	z-index: -1000;
+}
+
 #msform fieldset {
 	background: white;
 	border: 0 none;
@@ -53,7 +68,6 @@ div.intro {
 	width: 80%;
 	margin: 0 10%;
 	opacity: 0;
-	
 	/*stacking fieldsets above each other*/
 	position: absolute;
 }
