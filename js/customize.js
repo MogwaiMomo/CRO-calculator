@@ -1,14 +1,18 @@
 
 $(function(){
 
-	// make progress bar appear smoothly - DONE 
+	// make progress bar appear smoothly on 'start'
 
+	
 	$('#start-btn').click(function(){
 		$('#progressbar').addClass('appear').removeClass('disappear');
 	});
-
-	$('#back-intro').click(function(){
+	
+	// make progress bar disappear smoothly on 'back' or 'calculate':
+	
+	$('#back-intro, #calculate-btn').click(function(){
 		$('#progressbar').toggleClass('appear disappear');
 	});
+
 
 });

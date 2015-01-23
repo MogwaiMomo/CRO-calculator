@@ -86,7 +86,9 @@ div.answers {
 
 
 /*inputs*/
-#msform input, #msform textarea {
+#msform input, 
+#msform textarea,
+.result {
 	padding: 15px;
 	border: 1px solid #ccc;
 	border-radius: 3px;
@@ -171,6 +173,19 @@ input[placeholder] {
 	color: #999;
 	margin-bottom: 3px;
 }
+
+.cro-result {
+	border: solid 1px #999;
+	border-radius: 3px;
+	padding: 25px;
+	margin-bottom: 20px;
+}
+
+.minor-cta {
+	display:block;
+	color: #4B99BD;
+}
+
 
 /*progressbar*/
 #progressbar {
@@ -273,4 +288,5 @@ input[placeholder] {
 .hide {
 	visibility:hidden;
 }
+
 
