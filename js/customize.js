@@ -15,4 +15,10 @@ $(function(){
 	});
 
 
+	// refresh page on 'start over' click: 
+
+	$(".minor-cta").click(function(){
+		location.reload(); 
+	});
+
 });

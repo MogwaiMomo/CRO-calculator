@@ -99,32 +99,62 @@ div.answers {
 	font-size: 13px;
 }
 
+
+.result {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+
+
 input[placeholder] {
 	font-size: 11px;
 	text-align: center;
 }
 
+
+
+
 /*buttons*/
 #msform .action-button {
 	max-width: 150px;
-	background: #de5514;
+	border: solid 1px #DE6A35;
+	background-color: #ed7238;
+	background-image: -webkit-linear-gradient(top, #ef834f, #de5514);
+	background-image: -moz-linear-gradient(top, #ef834f, #de5514);
+	background-image: -o-linear-gradient(top, #ef834f, #de5514);
+	background-image: linear-gradient(top, #ef834f, #de5514);
 	font-weight: bold;
 	color: white;
-	border: 0 none;
 	border-radius: 3px;
 	cursor: pointer;
 	padding: 20px 5px;
 	margin: 30px 5px 10px 5px;
 }
 
+
+#msform .previous.action-button {
+	border: solid 1px #627288;
+	background-color: #627288;
+	background-image: -webkit-linear-gradient(top, #8FA7C6, #627288);
+	background-image: -moz-linear-gradient(top, #8FA7C6, #627288);
+	background-image: -o-linear-gradient(top, #8FA7C6, #627288);
+	background-image: linear-gradient(top, #8FA7C6, #627288);
+}
+
+
+#msform #quote {
+	max-width: 100%;
+	margin: 0px 5px 10px 5px;
+}
+
+
+
 #msform .action-button:hover, 
 #msform .action-button:focus {
 	box-shadow: 0 0 0 2px white, 0 0 0 3px #de5514;
 }
 
-#msform .previous.action-button {
-	background-color: #798CA5;
-}
 
 #msform .previous.action-button:hover, 
 #msform .previous.action-button:focus {
@@ -183,7 +213,7 @@ input[placeholder] {
 
 .minor-cta {
 	display:block;
-	color: #4B99BD;
+	color: #777;
 }
 
 
