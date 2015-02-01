@@ -103,6 +103,10 @@ div.answers {
 .result {
 	margin-top: 10px;
 	margin-bottom: 20px;
+  	border: none;
+  	background-color: #FFFFD4;
+  	font-size: 20px;
+  	font-weight: bold;
 }
 
 
