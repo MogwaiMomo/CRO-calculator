@@ -10,7 +10,7 @@ $(function(){
 	
 	// make progress bar disappear smoothly on 'back' or 'calculate':
 	
-	$('#back-intro, #calculate-btn').click(function(){
+	$('#back-intro, .calculate-btn').click(function(){
 		$('#progressbar').toggleClass('appear disappear');
 	});
 
@@ -22,3 +22,9 @@ $(function(){
 	});
 
 });
+
+
+
+
+
+

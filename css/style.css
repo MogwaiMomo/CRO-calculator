@@ -119,11 +119,7 @@ input[placeholder] {
 #msform .action-button {
 	max-width: 150px;
 	border: solid 1px #DE6A35;
-	background-color: #ed7238;
-	background-image: -webkit-linear-gradient(top, #ef834f, #de5514);
-	background-image: -moz-linear-gradient(top, #ef834f, #de5514);
-	background-image: -o-linear-gradient(top, #ef834f, #de5514);
-	background-image: linear-gradient(top, #ef834f, #de5514);
+	background-color: #de5514;
 	font-weight: bold;
 	color: white;
 	border-radius: 3px;
@@ -136,16 +132,19 @@ input[placeholder] {
 #msform .previous.action-button {
 	border: solid 1px #627288;
 	background-color: #627288;
-	background-image: -webkit-linear-gradient(top, #8FA7C6, #627288);
-	background-image: -moz-linear-gradient(top, #8FA7C6, #627288);
-	background-image: -o-linear-gradient(top, #8FA7C6, #627288);
-	background-image: linear-gradient(top, #8FA7C6, #627288);
+	background-image: none;
 }
 
 
-#msform #quote {
+#msform .quote {
 	max-width: 100%;
 	margin: 0px 5px 10px 5px;
+	background-image: none;
+	border: solid 1px #25A551;
+	background-image: -webkit-linear-gradient(top, #2CC360, #25A551);
+	background-image: -moz-linear-gradient(top, #2CC360, #25A551);
+	background-image: -o-linear-gradient(top, #2CC360, #25A551);
+	background-image: linear-gradient(top, #2CC360, #25A551);
 }
 
 
@@ -160,6 +159,11 @@ input[placeholder] {
 #msform .previous.action-button:focus {
 	box-shadow: 0 0 0 2px white, 0 0 0 3px #798CA5;
 }
+
+#msform .quote:hover, 
+#msform .quote:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #25A551;
+} 
 
 /*headings*/
 

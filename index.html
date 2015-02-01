@@ -16,12 +16,14 @@
 
   <!-- multistep form -->
 <form id="msform">
+
 	<!-- progressbar -->
 	<ul id="progressbar">
 		<li class="active">Step</li>
 		<li>Step</li>
 		<li>Step</li>
 	</ul>
+
 	<!-- fieldsets -->
 	<div class="intro">
 		<h2 class="intro-title">How much should <span class="underline">you</span> spend on CRO?</h2>
@@ -29,37 +31,67 @@
 		<input id="start-btn" type="button" name="next" class="next action-button" value="Get Started Now" />
 	</div>	
 
+
 	<fieldset class="step-1">
+
 		<h2 class="fs-title">Customer Value</h2>
 		<p class="fs-subtitle">First, let's calculate how much $ the average customer generates for your business. </p>
-		<h3 class="ip-label">Average Order Value</h3>
-		<input type="text" name="aov" placeholder="Example: $14 monthly fee" />
-		<h3 class="ip-label">Avg. Orders Per Year</h3>
-		<input type="password" name="aopp" placeholder="Example: 12 orders per year" />
-		<h3 class="ip-label">Avg. Retention Rate (in Years)</h3>
-		<input type="password" name="arr" placeholder="Example: 2 years" />
+
+		<!-- Inputs -->
+		<h3 class="ip-label">Order value, per customer</h3>
+		<input type="text" name="aov" class="js-aov" placeholder="E.g. Customer pays $14 per order, on average." required />
+		
+		<h3 class="ip-label">Orders per year, per customer</h3>
+		<input type="text" name="aopp" class="js-aopp" placeholder="E.g. Customer makes 12 orders per year, on average." required />
+		
+		<h3 class="ip-label">Retention rate (in years), per customer</h3>
+		<input type="text" name="arr" class="js-arr" placeholder="E.g. Customer sticks around for 2 years, on average" required />
+		
+
+		<!-- Buttons -->
 		<input id="back-intro" type="button" name="previous" class="previous action-button" value="Back" />
 		<input type="button" name="next" class="next action-button" value="Next" />
+	
 	</fieldset>
+
+
 	<fieldset>
+		
 		<h2 class="fs-title">Business Costs</h2>
 		<h3 class="fs-subtitle">Next, let's figure out how much you need to spend to make a sale.</h3>
-		<h3 class="ip-label">Gross Profit Margin</h3>
-		<input type="text" name="aov" placeholder="Example: 75%" />
-		<h3 class="ip-label">Acquisition Cost</h3>
-		<input type="password" name="aopp" placeholder="Example: $8" />
+		
+		<!-- Inputs -->
+		<h3 class="ip-label">Gross profit margin (in %)</h3>
+		<input type="text" name="gpm" class="js-gpm" placeholder="E.g. 75% profit on goods sold" required />
+		
+		<h3 class="ip-label">Acquisition cost per customer</h3>
+		<input type="text" name="ac" class="js-ac" placeholder="E.g. Customer costs me $8 in marketing, on average." required />
+		
+		<!-- Buttons -->
 		<input type="button" name="previous" class="previous action-button" value="Back" />
 		<input type="button" name="next" class="next action-button" value="Next" />
+	
 	</fieldset>
+
+
 	<fieldset>
+		
 		<h2 class="fs-title">Sale Volume</h2>
 		<h3 class="fs-subtitle">Finally, let's account for how many customers you gain over time.</h3>
+		
+		<!-- Inputs -->
 		<h3 class="ip-label">Acquisition Rate (per Year)</h3>
-		<input type="text" name="aov" placeholder="Example: 1,200" />
+		<input type="text" name="ar" class="js-ar" placeholder="Example: 1200" />
+		
+		<!-- Buttons -->
 		<input type="button" name="previous" class="previous action-button" value="Back" />
-		<input id="calculate-btn" type="button" name="next" class="next action-button" value="Calculate My Budget" />
+		<input type="button" name="calculate" class="calculate-btn next action-button" value="Calculate My Budget" />
+
 	</fieldset>
+
+
 	<div class="answers">
+
 		<h2 class="fs-title">Your CRO Budget</h2>
 		<h3 class="fs-subtitle">Here's a breakdown of how much your business could profit from a 10% conversion lift:</h3>
 
@@ -67,12 +99,16 @@
 
 			<h2 class="ip-label">What You Could Earn from CRO</h2>
 			<p class="bd-txt">(Lifetime profit generated annually with a 10% lift)</p>
-			<h3 class="result">Result</h3>
+			<h3 class="js-profit result">Result</h3>
 
 			<h2 class="ip-label">What Your CRO Budget Should Be</h2>
 			<p class="bd-txt">(set at 50% of profit above)</p>
-			<h3 class="result">Result</h3>
-			<input id="quote" type="button" name="quote" class="action-button" value="Get My FREE Quote from Kantan" />
+			<h3 class="js-budget result">Result</h3>
+
+			<!-- Submit Form to Server -->			
+			<input type="button" name="quote" class="quote action-button" value="Get a Quote on My Project" />
+
+
 			<a class="bd-txt minor-cta" href="#">Start over</a>
 		</div>
 		
@@ -86,7 +122,7 @@
 
 <script src="js/index.js"></script>
 <script src="js/customize.js"></script>
-
+<script src="js/calculate.js"></script>
 </body>
 
 </html>
